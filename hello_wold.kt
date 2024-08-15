@@ -14,7 +14,7 @@ script {
     name = "test"
     id = "__NEW_RUNNER__"
     scriptContent = """
-        sshpass -p SERVER_PASS ssh SERVER_LOGIN@SERVER_IP << EOF
+        sshpass -p env.SERVER_PASS ssh env.SERVER_LOGIN@env.SERVER_IP << EOF
         echo "hello, cruel world!" > hello_wold.txt
         EOF
     """.trimIndent()
