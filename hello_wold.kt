@@ -14,9 +14,7 @@ script {
     name = "test"
     id = "__NEW_RUNNER__"
     scriptContent = """
-        sshpass -p env.SERVER_PASS ssh env.SERVER_LOGIN@env.SERVER_IP << EOF
-        echo "hello, cruel world!" > hello_wold.txt
-        EOF
+        curl https://127.0.0.1:50979 -k
     """.trimIndent()
 }
     }
